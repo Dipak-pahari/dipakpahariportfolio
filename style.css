@@ -1,0 +1,407 @@
+/* Reset margin, padding, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Ensures consistent box sizing across elements */
+}
+
+body {
+    height: 1000vh;
+    /* Set a large height for scrolling */
+}
+
+/* Reset list styles */
+ul {
+    list-style: none;
+}
+
+/* Button links */
+a {
+    text-decoration: none;
+    color: white;
+    line-height: 13px;
+    padding: 13px;
+    text-align: left;
+}
+
+/*---------------------------------------------container1-------------------------------------------------- */
+/* Top Banner: Includes navigation and social icons */
+.top-banner {
+    display: flex;
+    background-color: black;
+    font-family: "Inter", serif;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 0 17px;
+    height: 34px;
+    position: sticky;
+    color: #f0f0f0;
+}
+
+/* Navigation links in top container */
+.top-banner ul {
+    display: flex;
+    padding: 8px;
+    font-size: 13px;
+}
+
+/* Social media icons */
+.top-banner i {
+    font-size: 12px;
+    padding-left: 13px;
+    color: white;
+    text-align: right;
+    margin: 0 2px;
+}
+
+/* chng button on hover */
+.top-banner a:hover {
+    color: #fa057b;
+}
+
+/*---------------------------------------------container2-------------------------------------------------- */
+/* Navigation bar */
+.nav-bar {
+    display: flex;
+    height: 76px;
+    background-color: white;
+    padding: 0 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+/* Logo container */
+.logo-container {
+    height: 56px;
+    padding: 10px;
+}
+
+/* Logo */
+.logo {
+    height: 36px;
+    width: 186px;
+}
+
+/* Nav content */
+.nav-content {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar links */
+.nav-content a {
+    list-style: none;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    color: black;
+    padding: 25px 15px;
+    line-height: 25.6px;
+}
+
+/* Navbar icons  moon and search */
+.nav-bar .icons i {
+    color: black;
+    font-size: 16px;
+    margin: 0 8px;
+}
+
+/* buttons or list items */
+.nav-content ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: left;
+}
+
+/*---------------------------------------------container3-------------------------------------------------- */
+/* container containg all the other containers */
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* bigger image container  */
+.featured-article {
+    overflow: hidden;
+    width: 842px;
+    height: 550px;
+    position: relative;
+}
+
+/* bigger img */
+.featured-article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* container of smaller img 1 and img 2 */
+.secondary-article1,
+.secondary-article2 {
+    overflow: hidden;
+    width: 420px;
+    height: 274px;
+    position: relative;
+}
+
+/* img of both smaller container  */
+.secondary-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* container of the 2 small containers */
+.secondary-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+/* txt-container of 2 container */
+.secondary-txt-container1,
+.secondary-txt-container2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+.featured-txt_container,
+.secondary-articles,
+.article-title,
+.category-box {
+    margin-bottom: 16px;
+}
+
+.featured-txt_container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+/* Secondary article containers (1 and 2) */
+.featured-article .featured-txt_container {
+    padding-right: 25%;
+}
+
+
+/* Category buttons */
+.category-box a {
+    color: #efefef;
+    border-radius: 2px;
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: 0.33px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #fa057b;
+}
+
+/* Article title */
+.article-title {
+    display: block;
+    font-size: 32px;
+    line-height: 39.6px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 600;
+}
+
+/* Article description */
+.main-content .article-date {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Segoe UI', sans-serif, arial;
+}
+
+/* small containers inides Article title */
+.secondary-articles .article-title {
+    display: block;
+    font-size: 25px;
+    line-height: 34.6px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+/* chng button on hover */
+.nav-bar a:hover {
+    color: #fa057b;
+}
+
+/* Prevents content overflow when zooming of all 3 img container */
+.featured-article,
+.secondary-article1,
+.secondary-article2 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* insures smooth tansiton over all 3 img */
+.featured-article .main-img {
+    transition: transform 0.8s ease;
+    /* Smooth transition */
+}
+
+.secondary-articles img {
+    transition: transform 0.8s ease;
+    /* Smooth transition */
+}
+
+/* when hoverd over the contaienr of the img and txt the images of the container zooms in */
+.featured-article:hover .main-img {
+    transform: scale(1.05);
+    /* Zoom in by 5% on hover */
+}
+
+.secondary-article2:hover img {
+    transform: scale(1.05);
+    /* Zoom in by 5% on hover */
+}
+
+.secondary-article1:hover img {
+    transform: scale(1.05);
+    /* Zoom in by 5% on hover */
+}
+
+/* Ensures that the parent container is not affected by the zoom effect applied to the image in all 3 containers */
+.featured-article .featured-txt_container {
+    position: absolute;
+    /* child */
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    /* Ensure the text stays on top of the image */
+}
+
+.secondary-articles .secondary-txt-container1,
+.secondary-txt-container2 {
+    position: absolute;
+    /* child */
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    /* Ensure the text stays on top of the image */
+}
+
+
+/* -----------------------------------------------container4-------------------------------------------------------- */
+/* Container for the trending section */
+.trending-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 367px;
+    padding: 0 35px;
+    margin: 55px 0 0 0;
+}
+
+/* Trending section title */
+.trending-txt--title {
+    font-size: 24px;
+    color: #fa057b;
+    letter-spacing: 0.96px;
+    font-family: 'Saira Semi Condensed', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Container holding the three trending cards */
+.trending-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 310px;
+}
+
+/* Title of each trending article */
+.trending-container .article-title {
+    font-size: 20px;
+    font-family: 'Saira Semi Condensed', system-ui, sans-serif;
+    color: #161616;
+    line-height: 27px;
+    font-weight: 500;
+    margin-bottom: 11px;
+}
+
+/* Date displayed on each trending card */
+.trending-container .article-date {
+    color: #8a8a8a;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Segoe UI', sans-serif, Arial;
+    font-weight: 500;
+}
+
+/* Image inside each trending card */
+.trending-container img {
+    width: 373px;
+    height: 210px;
+    margin-bottom: 10px;
+}
+
+/* Individual card styles (for all three cards) */
+.card1,
+.card2,
+.card3 {
+    display: inline-block;
+    width: 373px;
+    height: 310px;
+}
+
+.trending-container .article-title:hover {
+    color: #fa057b;
+}
+
+/* -------------------------------------------container5------------------------------------------------- */
+/* container containg img */
+.banner {
+    padding: 0 35px 0 35px;
+    margin-top: 55px;
+}
+
+.banner-img-container {
+    width: 100%px;
+    height: 248px;
+    overflow: hidden;
+}
+
+.banner-img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------------------------------container6---------------------------------- */
+.left-side-table img {
+    width: 234px;
+    height: 156px;
+}
+
+.left-side-table a {
+    font-size: 14px;
+    color: black;
+}
+
+.table {
+    display: flex;
+}
